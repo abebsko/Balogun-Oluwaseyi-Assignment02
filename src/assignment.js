@@ -13,15 +13,12 @@ const assignment = {};
  * @param {Array} arrayOfNumbers the array of numbers to sum
  * @returns number the sum of the numbers
  */
-const numbersA = [
-    68, -68, 27, 94, 72, -25, -51, 32, 10, 64, -94, 4, 34, -86, 90, 81, 20, -56,
-    -91, -50
-];
 
-function sumOfNumbers(numbersA) {
+
+function sumOfNumbers(arrayOfNumbers) {
     let sum = 0;
-    for (let i = 0; i < numbersA.length; i++) {
-        sum += numbersA[i];
+    for (let i = 0; i < arrayOfNumbers.length; i++) {
+        sum += arrayOfNumbers[i];
     }
     return sum;
 }
@@ -37,17 +34,13 @@ assignment.sumOfNumbers = sumOfNumbers;
  * @param {Array} arrayOfNumbers the array containing even or non-even numbers
  * @returns number the count of even numbers
  */
-const numbersB = [
-    17, 0, 67, 41, 49, 21, 1, 86, 76, 2, 54, 14, 93, 84, 14, 77, 35, 7, 29, 64
-];
 
-function countEvenNumbers(numbersB) {
+
+function countEvenNumbers(arrayOfNumbers) {    
     let evenNumbers = [];
-    
-
-    for (let i = 0; i < numbersB.length; i++) {
-        if (numbersB[i] % 2 == 0) {
-            evenNumbers.push(numbersB[i]); 
+    for (let i = 0; i < arrayOfNumbers.length; i++) {
+        if (arrayOfNumbers[i] % 2 === 0) {
+            evenNumbers.push(arrayOfNumbers[i]); 
         }
     }
     return evenNumbers.length; 
@@ -68,11 +61,12 @@ function countEvenNumbers(numbersB) {
  * @param {Array} arrayOfNumbers the array containing temperatures in Celsius to be converted
  * @returns Array the converted temperatures in Fahrenheit
  */
-function celsiusToFahrenheit(numbersC) {
+
+function celsiusToFahrenheit(arrayOfNumbers) {
     let converted = [];
 
-    for (i = 0; i < numbersC.length; i++) {
-        let result = (numbersC[i] * 9) / 5 + 32;
+    for (i = 0; i < arrayOfNumbers.length; i++) {
+        let result = (arrayOfNumbers[i] * 9) / 5 + 32;
         converted.push(Math.trunc(result));
     }
     return converted;
